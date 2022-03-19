@@ -3,15 +3,20 @@ function setup() {
   background(0)
   frameRate(10)
 
+function generateRandomInteger(max) {
+  return Math.floor(Math.random() * max) + 1;
+}
+
 let r = random(255)
 let g = random(255)
 let b = random(255)
-let n = random(0,2)
+let n = generateRandomInteger(3)
+console.log(n)
 
-  if (n === 0) {
+  if (n === 1) {
     fill(r, 0, 0)
     ellipse(100,80,100)
-  } else if (n === 1) {
+  } else if (n === 2) {
     fill(r, g, 0)
     ellipse(100,200,100)
   } else {
